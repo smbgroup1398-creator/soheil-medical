@@ -1,0 +1,1023 @@
+﻿
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>سهیل | مشاوره و راه‌اندازی مراکز تصویربرداری پزشکی</title>
+
+    <meta name="description" content="مشاوره راه‌اندازی مراکز تصویربرداری پزشکی، رادیولوژی و سونوگرافی، بررسی الزامات و پیگیری مراحل اخذ مجوزهای لازم.">
+
+    <style>
+        /* تنظیمات عمومی سایت */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f6f9fc;
+            color: #203047;
+            line-height: 2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        /* سربرگ */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e7edf3;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            color: #123052;
+            font-size: 21px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #0d9488;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            font-size: 14px;
+        }
+
+        nav a {
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #0d9488;
+        }
+
+        .nav-contact {
+            background: #123052;
+            color: #ffffff;
+            padding: 9px 17px;
+            border-radius: 9px;
+        }
+
+        .nav-contact:hover {
+            background: #0d9488;
+            color: #ffffff;
+        }
+
+        /* بخش اصلی معرفی */
+        .hero {
+            background:
+                radial-gradient(
+                    circle at 12% 20%,
+                    rgba(13, 148, 136, 0.18),
+                    transparent 35%
+                ),
+                linear-gradient(135deg, #102b49, #17466a);
+            color: #ffffff;
+            padding: 95px 0;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #9ce8dc;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(29px, 4vw, 45px);
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            color: #67e0d0;
+        }
+
+        .hero p {
+            color: #d9e5ef;
+            font-size: 16px;
+            margin-bottom: 28px;
+            max-width: 650px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 23px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: #0d9488;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #0f766e;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: #ffffff;
+        }
+
+        .btn-outline:hover {
+            background: #ffffff;
+            color: #123052;
+        }
+
+        /* تصویرسازی تزئینی بدون نیاز به عکس */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 330px;
+        }
+
+        .medical-card {
+            width: 100%;
+            max-width: 360px;
+            min-height: 310px;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            background: rgba(255, 255, 255, 0.09);
+            backdrop-filter: blur(8px);
+            border-radius: 28px;
+            padding: 28px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+            transform: rotate(-2deg);
+        }
+
+        .medical-icon {
+            width: 75px;
+            height: 75px;
+            border-radius: 22px;
+            background: #0d9488;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 38px;
+            margin-bottom: 23px;
+        }
+
+        .medical-card h2 {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .medical-card p {
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .mini-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.13);
+            border-radius: 8px;
+            padding: 5px 11px;
+            margin: 4px 2px;
+            font-size: 12px;
+        }
+
+        /* ویژگی‌های خدمات */
+        .features {
+            margin-top: -30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .feature {
+            background: #ffffff;
+            border: 1px solid #e9eff5;
+            border-radius: 15px;
+            padding: 24px;
+            box-shadow: 0 8px 30px rgba(20, 48, 75, 0.05);
+        }
+
+        .feature-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .feature h3 {
+            color: #123052;
+            font-size: 17px;
+            margin-bottom: 7px;
+        }
+
+        .feature p {
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        /* تنظیمات مشترک بخش‌ها */
+        section {
+            scroll-margin-top: 100px;
+        }
+
+        .section {
+            padding: 85px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 42px;
+        }
+
+        .section-heading span {
+            color: #0d9488;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .section-heading h2 {
+            color: #123052;
+            font-size: 30px;
+            line-height: 1.8;
+            margin: 7px 0 10px;
+        }
+
+        .section-heading p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* خدمات */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            border: 1px solid #e7edf3;
+            padding: 28px;
+            border-radius: 16px;
+            transition: 0.25s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(20, 48, 75, 0.08);
+            border-color: #b8e8e2;
+        }
+
+        .service-number {
+            color: #0d9488;
+            background: #e7f7f4;
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 13px;
+            font-size: 23px;
+            margin-bottom: 17px;
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+            color: #123052;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* معرفی مراحل کار */
+        .process-section {
+            background: #edf4f8;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .process-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 23px 19px;
+            border-top: 3px solid #0d9488;
+        }
+
+        .process-card .step {
+            color: #0d9488;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .process-card h3 {
+            font-size: 16px;
+            color: #123052;
+            margin: 9px 0;
+        }
+
+        .process-card p {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        /* بخش اعتماد و معرفی */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .about-content h2 {
+            font-size: 30px;
+            color: #123052;
+            line-height: 1.8;
+            margin-bottom: 17px;
+        }
+
+        .about-content p {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .check-list li {
+            margin: 9px 0;
+            font-size: 14px;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: #0d9488;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .about-panel {
+            background: #123052;
+            color: #ffffff;
+            border-radius: 22px;
+            padding: 36px;
+        }
+
+        .about-panel h3 {
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .about-panel p {
+            color: #d4e1ec;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .about-panel .btn {
+            background: #0d9488;
+            color: #ffffff;
+        }
+
+        /* تماس با ما */
+        .contact-section {
+            background: #f0f7f8;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            border: 1px solid #e4edf0;
+            border-radius: 17px;
+            padding: 30px;
+        }
+
+        .contact-card h3 {
+            font-size: 20px;
+            color: #123052;
+            margin-bottom: 12px;
+        }
+
+        .contact-card p {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .phone-number {
+            display: inline-block;
+            color: #0d9488;
+            font-size: 23px;
+            font-weight: bold;
+            direction: ltr;
+            unicode-bidi: embed;
+            margin: 8px 0 20px;
+        }
+
+        .contact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .contact-actions .btn {
+            background: #123052;
+            color: #ffffff;
+        }
+
+        .contact-actions .whatsapp {
+            background: #128c7e;
+        }
+
+        /* پابرگ */
+        footer {
+            background: #0c2138;
+            color: #ffffff;
+            padding: 28px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        footer p {
+            font-size: 12px;
+            color: #c4d2df;
+        }
+
+        footer a {
+            color: #79e1d3;
+        }
+
+        /* نمایش مناسب در موبایل و تبلت */
+        @media (max-width: 900px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .hero-visual {
+                min-height: auto;
+            }
+
+            .medical-card {
+                transform: none;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                gap: 25px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 92%;
+            }
+
+            .navbar {
+                padding: 14px 0;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .logo {
+                font-size: 18px;
+                white-space: normal;
+            }
+
+            nav {
+                width: 100%;
+                flex-wrap: wrap;
+                gap: 10px 16px;
+                font-size: 12px;
+            }
+
+            .nav-contact {
+                padding: 5px 10px;
+            }
+
+            .hero {
+                padding: 55px 0 70px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .btn {
+                padding: 10px 15px;
+                font-size: 13px;
+            }
+
+            .feature-grid,
+            .services-grid,
+            .process-grid,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                margin-top: -20px;
+            }
+
+            .feature {
+                padding: 20px;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-heading h2,
+            .about-content h2 {
+                font-size: 25px;
+            }
+
+            .about-panel,
+            .contact-card {
+                padding: 24px;
+            }
+
+            .phone-number {
+                font-size: 21px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- سربرگ سایت -->
+    <header>
+        <div class="container navbar">
+
+            <a href="#home" class="logo">
+                سهیل <span>|</span> مشاوره مراکز تصویربرداری
+            </a>
+
+            <nav aria-label="منوی اصلی">
+                <a href="#home">صفحه اصلی</a>
+                <a href="#services">خدمات ما</a>
+                <a href="#process">مراحل کار</a>
+                <a href="#about">درباره ما</a>
+                <a href="#contact" class="nav-contact">تماس با ما</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- بخش معرفی اصلی -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
+
+                <div>
+                    <span class="eyebrow">
+                        مشاوره تخصصی راه‌اندازی مراکز تصویربرداری پزشکی
+                    </span>
+
+                    <h1>
+                        از ایده تا راه‌اندازی
+                        <span>مرکز تصویربرداری پزشکی</span>
+                    </h1>
+
+                    <p>
+                        اگر قصد راه‌اندازی مرکز سونوگرافی یا رادیولوژی دارید،
+                        برای شناخت الزامات، بررسی مسیر اخذ مجوزها و برنامه‌ریزی
+                        مراحل راه‌اندازی، می‌توانید از خدمات مشاوره ما استفاده کنید.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            درخواست مشاوره
+                        </a>
+
+                        <a href="#services" class="btn btn-outline">
+                            مشاهده خدمات
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="medical-card">
+                        <div class="medical-icon">✚</div>
+
+                        <h2>مسیر روشن‌تر برای شروع</h2>
+
+                        <p>
+                            شناخت مراحل اداری و فنی، برنامه‌ریزی بهتر
+                            و پیگیری اصولی فرایند راه‌اندازی مرکز.
+                        </p>
+
+                        <span class="mini-tag">رادیولوژی</span>
+                        <span class="mini-tag">سونوگرافی</span>
+                        <span class="mini-tag">اخذ مجوز</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- مزیت‌های همکاری -->
+        <section class="features">
+            <div class="container feature-grid">
+
+                <article class="feature">
+                    <div class="feature-icon">📋</div>
+                    <h3>بررسی الزامات و مجوزها</h3>
+                    <p>
+                        آشنایی با شرایط و مدارک موردنیاز متناسب با نوع مرکز
+                        و ضوابط مراجع ذی‌صلاح.
+                    </p>
+                </article>
+
+                <article class="feature">
+                    <div class="feature-icon">🩺</div>
+                    <h3>مشاوره متناسب با نوع مرکز</h3>
+                    <p>
+                        بررسی مسیر راه‌اندازی مرکز سونوگرافی، رادیولوژی
+                        و سایر خدمات تصویربرداری موردنظر.
+                    </p>
+                </article>
+
+                <article class="feature">
+                    <div class="feature-icon">🤝</div>
+                    <h3>همراهی در مسیر اجرا</h3>
+                    <p>
+                        برنامه‌ریزی مراحل کار، بررسی پیش‌نیازها
+                        و پیگیری امور توافق‌شده.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- خدمات -->
+        <section class="section" id="services">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>خدمات ما</span>
+                    <h2>چطور می‌توانیم به شما کمک کنیم؟</h2>
+                    <p>
+                        خدمات مشاوره بر اساس نوع مرکز، شرایط متقاضی
+                        و ضوابط جاری مراجع مسئول بررسی می‌شود.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+
+                    <article class="service-card">
+                        <div class="service-number">۰۱</div>
+                        <h3>مشاوره اخذ مجوز</h3>
+                        <p>
+                            بررسی مراحل، مدارک و پیش‌نیازهای مربوط به
+                            درخواست مجوزهای موردنیاز برای راه‌اندازی مرکز.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-number">۰۲</div>
+                        <h3>راه‌اندازی مرکز سونوگرافی</h3>
+                        <p>
+                            آشنایی با الزامات مرتبط با راه‌اندازی مرکز
+                            سونوگرافی و برنامه‌ریزی اقدامات اولیه.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-number">۰۳</div>
+                        <h3>راه‌اندازی مرکز رادیولوژی</h3>
+                        <p>
+                            بررسی مقدماتی الزامات فنی، اداری و
+                            مجوزهای مرتبط با مرکز رادیولوژی.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-number">۰۴</div>
+                        <h3>بررسی الزامات محل مرکز</h3>
+                        <p>
+                            آشنایی با ملاحظات مربوط به محل، فضا،
+                            کاربری و الزامات فنی قابل بررسی پیش از اجرا.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-number">۰۵</div>
+                        <h3>برنامه‌ریزی مراحل اجرا</h3>
+                        <p>
+                            تنظیم مسیر پیشنهادی کار و مشخص‌کردن
+                            اقدامات موردنیاز بر اساس شرایط پروژه.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-number">۰۶</div>
+                        <h3>پیگیری امور اداری</h3>
+                        <p>
+                            مشاوره و همراهی در پیگیری مراحل توافق‌شده
+                            در چارچوب مقررات و اختیارات قانونی.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- مراحل همکاری -->
+        <section class="section process-section" id="process">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>مراحل همکاری</span>
+                    <h2>شروع کار در چهار گام</h2>
+                    <p>
+                        ابتدا شرایط پروژه بررسی می‌شود و سپس
+                        مسیر مناسب برای ادامه کار مشخص خواهد شد.
+                    </p>
+                </div>
+
+                <div class="process-grid">
+
+                    <article class="process-card">
+                        <span class="step">گام اول</span>
+                        <h3>تماس و بیان نیاز</h3>
+                        <p>
+                            نوع مرکز و هدف خود را مطرح کنید
+                            تا نیازهای اولیه مشخص شوند.
+                        </p>
+                    </article>
+
+                    <article class="process-card">
+                        <span class="step">گام دوم</span>
+                        <h3>بررسی شرایط</h3>
+                        <p>
+                            شرایط اولیه، محل موردنظر و
+                            الزامات احتمالی بررسی می‌شوند.
+                        </p>
+                    </article>
+
+                    <article class="process-card">
+                        <span class="step">گام سوم</span>
+                        <h3>تعیین مسیر پیشنهادی</h3>
+                        <p>
+                            مراحل، مدارک و اقدامات لازم
+                            برای پروژه مشخص می‌شوند.
+                        </p>
+                    </article>
+
+                    <article class="process-card">
+                        <span class="step">گام چهارم</span>
+                        <h3>شروع همکاری</h3>
+                        <p>
+                            پس از توافق درباره خدمات و شرایط،
+                            اقدامات تعیین‌شده دنبال می‌شوند.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- درباره خدمات -->
+        <section class="section" id="about">
+            <div class="container about-grid">
+
+                <div class="about-content">
+                    <span style="color:#0d9488;font-weight:bold;">
+                        درباره خدمات مشاوره
+                    </span>
+
+                    <h2>
+                        شروع آگاهانه، برنامه‌ریزی دقیق‌تر
+                    </h2>
+
+                    <p>
+                        راه‌اندازی مرکز تصویربرداری پزشکی به شناخت
+                        الزامات اداری، فنی و حرفه‌ای نیاز دارد.
+                        بررسی پیش‌نیازها پیش از شروع می‌تواند به
+                        برنامه‌ریزی بهتر و کاهش سردرگمی کمک کند.
+                    </p>
+
+                    <p>
+                        هدف این خدمات، ارائه مشاوره متناسب با شرایط
+                        هر پروژه و کمک به شناخت مسیر قانونی راه‌اندازی
+                        مرکز است.
+                    </p>
+
+                    <ul class="check-list">
+                        <li>بررسی نیازهای اولیه پروژه</li>
+                        <li>توضیح مراحل و مدارک موردنیاز</li>
+                        <li>برنامه‌ریزی اقدامات اجرایی</li>
+                        <li>توجه به ضوابط و مقررات جاری</li>
+                    </ul>
+                </div>
+
+                <div class="about-panel">
+                    <h3>برای شروع پروژه‌تان آماده‌اید؟</h3>
+
+                    <p>
+                        برای بررسی اولیه شرایط راه‌اندازی مرکز
+                        سونوگرافی یا رادیولوژی، تماس بگیرید
+                        و درباره نیازهای خود صحبت کنید.
+                    </p>
+
+                    <a href="tel:09195010509" class="btn">
+                        تماس مستقیم با سهیل
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- تماس با ما -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>ارتباط با ما</span>
+                    <h2>برای مشاوره تماس بگیرید</h2>
+                    <p>
+                        نوع مرکز، شهر محل اجرا و موضوعی را که
+                        برای آن به مشاوره نیاز دارید مطرح کنید.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+
+                    <div class="contact-card">
+                        <h3>تماس تلفنی</h3>
+
+                        <p>
+                            برای گفت‌وگو درباره شرایط پروژه
+                            و آشنایی با خدمات مشاوره تماس بگیرید.
+                        </p>
+
+                        <a
+                            href="tel:09195010509"
+                            class="phone-number"
+                            dir="ltr"
+                        >
+                            09195010509
+                        </a>
+
+                        <div class="contact-actions">
+                            <a
+                                href="tel:09195010509"
+                                class="btn"
+                            >
+                                تماس مستقیم
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>ارتباط از طریق واتساپ</h3>
+
+                        <p>
+                            می‌توانید پیام بدهید و نوع مرکز،
+                            شهر موردنظر و پرسش اولیه خود را بنویسید.
+                        </p>
+
+                        <p>
+                            شماره واتساپ:
+                            <strong dir="ltr">09195010509</strong>
+                        </p>
+
+                        <div class="contact-actions">
+                            <a
+                                href="https://wa.me/989195010509"
+                                class="btn whatsapp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                ارسال پیام در واتساپ
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- پابرگ -->
+    <footer>
+        <div class="container footer-content">
+
+            <div>
+                <strong>سهیل | مشاوره و راه‌اندازی مراکز تصویربرداری پزشکی</strong>
+                <p>
+                    مشاوره راه‌اندازی مراکز رادیولوژی و سونوگرافی
+                </p>
+            </div>
+
+            <p>
+                © <span id="year">2026</span>
+                تمامی حقوق محفوظ است.
+            </p>
+
+        </div>
+    </footer>
+
+</body>
+</html>
